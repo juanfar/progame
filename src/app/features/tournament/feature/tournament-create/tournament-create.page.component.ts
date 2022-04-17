@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CreateTournamentService } from '../../data-access/create-tournament.service';
 
 @Component({
   selector: 'app-tournament-create-page',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TournamentCreatePageComponent implements OnInit {
 
-  constructor() { }
+  step = 'default';
+
+  constructor(
+    private readonly createTournamentService: CreateTournamentService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  nextStep(): void {
+  }
+
+  backStep(): void {
   }
 
 }

@@ -1,0 +1,22 @@
+<div class="back_button">
+  <button (click)="backStep()">atras</button>
+</div>
+
+<div class="buttons default">
+  <button (click)="nextStep()">Nuevo Torneo</button>
+  <button (click)="nextStep()">Mis Torneos</button>
+</div>
+
+<div class="buttons type">
+  <button (click)="nextStep()">Liga</button>
+  <button (click)="nextStep()">Copa</button>
+</div>
+
+<div class="buttons type">
+  <button (click)="nextStep()">Eliminacion Directa</button>
+  <button (click)="nextStep()">Grupos</button>
+</div>
+
+<div class="list" *ngIf="step === 'list'">
+  <h3>List...</h3>
+</div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TournamentCreateRoutingModule } from './tournament-create-routing.module';
 import { TournamentCreatePageComponent } from './tournament-create.page.component';
+import { TournamentStepModule } from '../../ui/tournament-step/tournament-step.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TournamentCreatePageComponent } from './tournament-create.page.componen
   ],
   imports: [
     CommonModule,
-    TournamentCreateRoutingModule
+    TournamentCreateRoutingModule,
+    TournamentStepModule
   ]
 })
 export class TournamentCreateModule { }
