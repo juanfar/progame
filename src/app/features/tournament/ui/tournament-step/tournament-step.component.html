@@ -2,19 +2,19 @@
   <button (click)="backStep()">atras</button>
 </div>
 
-<div class="buttons default">
-  <button (click)="nextStep()">Nuevo Torneo</button>
-  <button (click)="nextStep()">Mis Torneos</button>
+<div class="buttons default" *ngIf="step === 'default'">
+  <button (click)="goStep('type')">Nuevo Torneo</button>
+  <button (click)="goStep('my')">Mis Torneos</button>
 </div>
 
-<div class="buttons type">
-  <button (click)="nextStep()">Liga</button>
-  <button (click)="nextStep()">Copa</button>
+<div class="buttons type" *ngIf="step === 'type'">
+  <button (click)="goStep('ligue')">Liga</button>
+  <button (click)="goStep('cup')">Copa</button>
 </div>
 
-<div class="buttons type">
-  <button (click)="nextStep()">Eliminacion Directa</button>
-  <button (click)="nextStep()">Grupos</button>
+<div class="buttons type" *ngIf="step === 'group_type'">
+  <button (click)="goStep('direct')">Eliminacion Directa</button>
+  <button (click)="goStep('groups')">Grupos</button>
 </div>
 
 <div class="list" *ngIf="step === 'list'">

@@ -7,8 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TournamentStepComponent implements OnInit {
 
-  @Input() step!: string;
-  @Output() nextStepEvent = new EventEmitter<string>();
+  @Input() step!: string | null;
+  @Output() goStepEvent = new EventEmitter<string>();
   @Output() backStepEvent = new EventEmitter<string>();
 
   constructor() { }
@@ -16,8 +16,8 @@ export class TournamentStepComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  nextStep() {
-    this.nextStepEvent.emit();
+  goStep(step: string): void {
+    this.goStepEvent.emit(step);
   }
 
   backStep() {

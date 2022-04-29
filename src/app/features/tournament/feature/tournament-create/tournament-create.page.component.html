@@ -1,1 +1,1 @@
-<app-tournament-step (nextStepEvent)="nextStep()" (backStepEvent)="backStep()" [step]="step"></app-tournament-step>
+<app-tournament-step (goStepEvent)="goStep($event)" (backStepEvent)="backStep()" [step]="step$ | async"></app-tournament-step>
